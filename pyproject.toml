@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Aoptics"
+dynamic = ["version"]
+description = "Comprehensive classical & quantum optics research library (Born & Wolf, Saleh & Teich, Goodman, Gerry & Knight, Boyd)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Aoptics Contributors" },
+]
+requires-python = ">=3.9"
+keywords = [
+    "optics", "photonics", "quantum-optics", "nonlinear-optics", "laser",
+    "diffraction", "interferometry", "fiber-optics", "physics-simulation",
+    "geometrical-optics", "fourier-optics", "coherence",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "numpy>=1.21",
+    "scipy>=1.7",
+    "matplotlib>=3.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "build>=1.0", "twine>=5.0"]
+notebooks = ["jupyter", "ipywidgets"]
+
+[project.urls]
+Homepage = "https://github.com/OWNER/Aoptics"
+Repository = "https://github.com/OWNER/Aoptics"
+Issues = "https://github.com/OWNER/Aoptics/issues"
+Changelog = "https://github.com/OWNER/Aoptics/blob/main/CHANGELOG.md"
+Documentation = "https://github.com/OWNER/Aoptics#readme"
+
+[tool.setuptools.dynamic]
+version = { attr = "Aoptics.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["Aoptics*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
