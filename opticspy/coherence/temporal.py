@@ -1,5 +1,5 @@
-"""
-opticspy.coherence.temporal
+﻿"""
+aoptics.coherence.temporal
 ============================
 Temporal coherence of stationary light: the Wiener-Khinchin theorem
 relates the (self-)coherence function Gamma(tau) = <E*(t) E(t+tau)> to
@@ -134,3 +134,4 @@ def power_spectral_density_from_signal(signal, dt):
     freq = np.fft.fftshift(np.fft.fftfreq(N, d=dt))
     psd = np.abs(spec) ** 2 * dt / N
     return freq, psd
+

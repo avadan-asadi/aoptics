@@ -1,7 +1,7 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.scattering import rayleigh_scattering as rs, metal_optics as mo
+from aoptics.scattering import rayleigh_scattering as rs, metal_optics as mo
 
 
 # --------------------------- Rayleigh scattering ---------------------------
@@ -51,7 +51,7 @@ def test_relative_scattering_vs_wavelength_blue_stronger_than_red():
 # --------------------------- metal optics ---------------------------
 
 def test_normal_incidence_reflectance_lossless_limit_matches_dielectric():
-    from opticspy.electromagnetic import fresnel
+    from aoptics.electromagnetic import fresnel
     n = 1.5
     R_metal_form = mo.normal_incidence_reflectance(n, 0.0, n_incident=1.0)
     R_dielectric = fresnel.normal_incidence_reflectance(1.0, n)
@@ -74,3 +74,4 @@ def test_absorptance_plus_reflectance_is_one_at_normal_incidence():
     R = mo.normal_incidence_reflectance(n, k)
     A = mo.absorptance(0.0, n, k, polarization='unpolarized')
     assert R + A == pytest.approx(1.0, rel=1e-6)
+

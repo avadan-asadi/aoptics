@@ -1,5 +1,5 @@
-"""
-opticspy.nonlinear_optics_boyd.coupled_wave_mixing
+﻿"""
+aoptics.nonlinear_optics_boyd.coupled_wave_mixing
 ======================================================
 The coupled-amplitude equations for chi(2) three-wave mixing
 (sum-frequency/difference-frequency generation, optical parametric
@@ -76,3 +76,4 @@ def manley_rowe_photon_fluxes(A1, A2, A3, omega1, omega2, omega3):
 def conversion_efficiency(A3, A3_input_equivalent):
     """Fractional power conversion into the sum/difference-frequency wave."""
     return np.abs(A3) ** 2 / np.abs(A3_input_equivalent) ** 2
+

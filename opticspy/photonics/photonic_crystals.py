@@ -1,5 +1,5 @@
-"""
-opticspy.photonics.photonic_crystals
+﻿"""
+aoptics.photonics.photonic_crystals
 =======================================
 One-dimensional photonic crystals (multilayer dielectric stacks /
 distributed Bragg reflectors), via the standard characteristic-matrix
@@ -110,3 +110,4 @@ def bragg_stopband_edges(n_high, n_low, center_wavelength):
     frac = (4.0 / np.pi) * np.arcsin((n_high - n_low) / (n_high + n_low))
     half = 0.5 * frac * center_wavelength
     return center_wavelength - half, center_wavelength + half
+

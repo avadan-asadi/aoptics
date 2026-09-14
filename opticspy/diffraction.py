@@ -1,5 +1,5 @@
-"""
-opticspy.diffraction
+﻿"""
+aoptics.diffraction
 ====================
 Diffraction gratings, Talbot effect, Moire patterns.
 """
@@ -86,3 +86,4 @@ def grating_efficiency(grating, N_orders=5):
     orders = list(range(-N_orders, N_orders+1))
     efficiencies = [np.abs(spectrum[m % N])**2 / power_total for m in orders]
     return orders, efficiencies
+

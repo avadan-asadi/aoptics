@@ -1,5 +1,5 @@
-"""
-opticspy.photonics.waveguides
+﻿"""
+aoptics.photonics.waveguides
 ===============================
 Guided modes of a symmetric planar (slab) dielectric waveguide: core of
 thickness d and index n1, cladding index n2 < n1, computed by solving
@@ -106,3 +106,4 @@ def mode_confinement_factor(n_eff, k0, n1, n2, d):
     P_core = np.trapezoid(E_core ** 2, x_core)
     P_clad = 2 * np.trapezoid(E_clad ** 2, x_clad)  # two claddings by symmetry
     return P_core / (P_core + P_clad)
+

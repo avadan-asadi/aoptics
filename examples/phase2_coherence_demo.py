@@ -1,5 +1,5 @@
-"""
-Phase 2 demo -- opticspy.coherence
+﻿"""
+Phase 2 demo -- aoptics.coherence
 ====================================
 (1) Temporal coherence: Lorentzian-linewidth source -> Michelson
     interferogram envelope decaying with delay, coherence length.
@@ -14,7 +14,7 @@ Run:  python examples/phase2_coherence_demo.py
 import numpy as np
 import matplotlib.pyplot as plt
 
-from opticspy.coherence import temporal, spatial, speckle
+from aoptics.coherence import temporal, spatial, speckle
 
 # ---- 1) Temporal coherence: a sodium-lamp-like Lorentzian line ----
 wavelength0 = 589e-9
@@ -99,3 +99,4 @@ axes[2].legend(fontsize=7)
 fig.tight_layout()
 fig.savefig("phase2_coherence_demo.png", dpi=140)
 print("\nSaved figure: phase2_coherence_demo.png")
+

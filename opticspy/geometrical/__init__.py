@@ -1,5 +1,5 @@
-"""
-opticspy.geometrical
+﻿"""
+aoptics.geometrical
 =====================
 Geometrical (ray) optics: paraxial ray tracing via ABCD matrices, cardinal
 points of optical systems, real (skew-free, meridional) ray tracing through
@@ -16,3 +16,4 @@ and Chapter 6 (Polarization Optics, geometry parts).
 from . import ray_tracing, aberrations
 
 __all__ = ["ray_tracing", "aberrations"]
+

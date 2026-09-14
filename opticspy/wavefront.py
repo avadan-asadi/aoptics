@@ -1,5 +1,5 @@
-"""
-opticspy.wavefront
+﻿"""
+aoptics.wavefront
 ==================
 Wavefront analysis using Zernike polynomials.
 
@@ -223,3 +223,4 @@ def generate_aberrated_wavefront(coefficients, N=256):
         Z = zernike(n, m, N)
         wavefront += amp * np.where(np.isnan(Z), 0, Z)
     return wavefront
+

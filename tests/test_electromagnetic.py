@@ -1,7 +1,7 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.electromagnetic import fresnel, polarization as pol, crystal_optics as co
+from aoptics.electromagnetic import fresnel, polarization as pol, crystal_optics as co
 
 
 # --------------------------- Fresnel ---------------------------
@@ -151,3 +151,4 @@ def test_birefringence_sign_matches_crystal_type():
     assert not co.is_positive_uniaxial(d['no'], d['ne'])
     q = co.COMMON_UNIAXIAL_CRYSTALS["quartz_589nm"]
     assert co.is_positive_uniaxial(q['no'], q['ne'])
+

@@ -1,5 +1,5 @@
-"""
-opticspy.qoptics.master_equation
+﻿"""
+aoptics.qoptics.master_equation
 ===================================
 A general-purpose Lindblad master equation integrator,
 
@@ -68,3 +68,4 @@ def photon_number_decay(kappa, n0, tlist):
     `solve_lindblad` with a single amplitude-damping collapse operator.
     """
     return n0 * np.exp(-kappa * np.asarray(tlist))
+

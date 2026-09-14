@@ -1,10 +1,10 @@
-# OpticsPy Araştırma Kütüphanesi
+﻿# aoptics Araştırma Kütüphanesi
 
 **[English](README.md) | [فارسی](README.fa.md) | [Türkçe](README.tr.md)**
 
-[![PyPI version](https://img.shields.io/pypi/v/opticspy-research.svg)](https://pypi.org/project/opticspy-research/)
+[![PyPI version](https://img.shields.io/pypi/v/aoptics.svg)](https://pypi.org/project/aoptics/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python](https://img.shields.io/pypi/pyversions/opticspy-research.svg)](https://pypi.org/project/opticspy-research/)
+[![Python](https://img.shields.io/pypi/pyversions/aoptics.svg)](https://pypi.org/project/aoptics/)
 
 Klasik ve kuantum optik araştırma ve modellemesi için kapsamlı bir Python kütüphanesi.
 Aşağıdaki temel kaynak kitapların bölümlerini sistematik biçimde kapsayacak şekilde
@@ -24,53 +24,53 @@ her örnek betik uçtan uca çalıştırılabilir, bir grafik üretir.
 ## Modül haritası
 
 ### Temel çekirdek (dalga optiği / skaler kırınım / kuantum durumları)
-- `opticspy.beams` — Gauss, Laguerre-Gauss, Hermite-Gauss, Bessel demetleri
-- `opticspy.propagation` — açısal spektrum, Fresnel, Fraunhofer, demet yayılım yöntemi (BPM)
-- `opticspy.interference` — çift/çok demetli girişim, Fabry-Perot, Michelson/Mach-Zehnder, holografi
-- `opticspy.diffraction` — kırınım ağları, Talbot halıları, Moire desenleri, Fresnel bölge plakaları
-- `opticspy.wavefront` — Zernike polinomları, Strehl oranı, Shack-Hartmann simülasyonu
-- `opticspy.quantum` — Fock/uyumlu/sıkıştırılmış/termal/kedi durumları, Wigner fonksiyonu
+- `aoptics.beams` — Gauss, Laguerre-Gauss, Hermite-Gauss, Bessel demetleri
+- `aoptics.propagation` — açısal spektrum, Fresnel, Fraunhofer, demet yayılım yöntemi (BPM)
+- `aoptics.interference` — çift/çok demetli girişim, Fabry-Perot, Michelson/Mach-Zehnder, holografi
+- `aoptics.diffraction` — kırınım ağları, Talbot halıları, Moire desenleri, Fresnel bölge plakaları
+- `aoptics.wavefront` — Zernike polinomları, Strehl oranı, Shack-Hartmann simülasyonu
+- `aoptics.quantum` — Fock/uyumlu/sıkıştırılmış/termal/kedi durumları, Wigner fonksiyonu
 
 ### Faz 1 — Geometrik ve elektromanyetik optik (Born & Wolf Böl. 1,3-5,14; Saleh & Teich Böl. 1,6)
-- `opticspy.geometrical.ray_tracing` — paraksiyel ABCD matris optiği, tam 3B ışın izleme
-- `opticspy.geometrical.aberrations` — üçüncü dereceden Seidel aberasyon teorisi
-- `opticspy.electromagnetic.fresnel` — Fresnel katsayıları, Brewster/kritik açı
-- `opticspy.electromagnetic.polarization` — Jones hesabı, Stokes/Mueller hesabı, Poincare küresi
-- `opticspy.electromagnetic.crystal_optics` — indeks elipsoidi, çift kırılım
+- `aoptics.geometrical.ray_tracing` — paraksiyel ABCD matris optiği, tam 3B ışın izleme
+- `aoptics.geometrical.aberrations` — üçüncü dereceden Seidel aberasyon teorisi
+- `aoptics.electromagnetic.fresnel` — Fresnel katsayıları, Brewster/kritik açı
+- `aoptics.electromagnetic.polarization` — Jones hesabı, Stokes/Mueller hesabı, Poincare küresi
+- `aoptics.electromagnetic.crystal_optics` — indeks elipsoidi, çift kırılım
 
 ### Faz 2 — Uyumluluk ve istatistiksel optik (Born & Wolf Böl. 10; Goodman)
-- `opticspy.coherence.temporal` — Wiener-Khinchin teoremi, uyumluluk süresi/uzunluğu
-- `opticspy.coherence.spatial` — Van Cittert-Zernike teoremi
-- `opticspy.coherence.speckle` — speckle istatistikleri, Monte Carlo simülasyonu
+- `aoptics.coherence.temporal` — Wiener-Khinchin teoremi, uyumluluk süresi/uzunluğu
+- `aoptics.coherence.spatial` — Van Cittert-Zernike teoremi
+- `aoptics.coherence.speckle` — speckle istatistikleri, Monte Carlo simülasyonu
 
 ### Faz 3 — Fotonik (Saleh & Teich Böl. 7-9,21)
-- `opticspy.photonics.waveguides` — düzlemsel dalga kılavuzu TE modları
-- `opticspy.photonics.fibers` — V-sayısı, sayısal açıklık, Sellmeier dağılımı
-- `opticspy.photonics.resonators` — Fabry-Perot, kendiliğinden tutarlı Gauss modu
-- `opticspy.photonics.nonlinear_optics` — SHG faz eşleştirme, Kerr etkisi
-- `opticspy.photonics.photonic_crystals` — çok katmanlı transfer matrisi yöntemi
+- `aoptics.photonics.waveguides` — düzlemsel dalga kılavuzu TE modları
+- `aoptics.photonics.fibers` — V-sayısı, sayısal açıklık, Sellmeier dağılımı
+- `aoptics.photonics.resonators` — Fabry-Perot, kendiliğinden tutarlı Gauss modu
+- `aoptics.photonics.nonlinear_optics` — SHG faz eşleştirme, Kerr etkisi
+- `aoptics.photonics.photonic_crystals` — çok katmanlı transfer matrisi yöntemi
 
 ### Faz 4 — İleri kuantum optik (Gerry & Knight, tam metin)
-- `opticspy.qoptics.operators` — alan operatörleri, yer değiştirme/sıkıştırma
-- `opticspy.qoptics.jaynes_cummings` — tam Jaynes-Cummings modeli, çöküş-yeniden doğuş
-- `opticspy.qoptics.master_equation` — Lindblad ana denklemi
-- `opticspy.qoptics.beamsplitter` — Hong-Ou-Mandel etkisi
-- `opticspy.qoptics.entanglement` — von Neumann entropisi, sadakat
-- `opticspy.qoptics.quantum_information` — kuantum ışınlanma, BB84
+- `aoptics.qoptics.operators` — alan operatörleri, yer değiştirme/sıkıştırma
+- `aoptics.qoptics.jaynes_cummings` — tam Jaynes-Cummings modeli, çöküş-yeniden doğuş
+- `aoptics.qoptics.master_equation` — Lindblad ana denklemi
+- `aoptics.qoptics.beamsplitter` — Hong-Ou-Mandel etkisi
+- `aoptics.qoptics.entanglement` — von Neumann entropisi, sadakat
+- `aoptics.qoptics.quantum_information` — kuantum ışınlanma, BB84
 
 ### Faz 5 — Fourier optiği, kaynaklar/dedektörler, modülasyon, saçılma
-- `opticspy.fourier_optics` — açıklık fonksiyonu, PSF, OTF/MTF, çözünürlük kriterleri
-- `opticspy.sources_detectors` — lazer hız denklemleri, fotodedektör gürültüsü
-- `opticspy.modulation` — elektro-optik (Pockels), akusto-optik (Bragg)
-- `opticspy.scattering` — Rayleigh saçılması, metal optiği
+- `aoptics.fourier_optics` — açıklık fonksiyonu, PSF, OTF/MTF, çözünürlük kriterleri
+- `aoptics.sources_detectors` — lazer hız denklemleri, fotodedektör gürültüsü
+- `aoptics.modulation` — elektro-optik (Pockels), akusto-optik (Bragg)
+- `aoptics.scattering` — Rayleigh saçılması, metal optiği
 
 ### Faz 6 — Boyd'un kitap bölümlerine göre doğrusal olmayan optik
-- `opticspy.nonlinear_optics_boyd.susceptibility` — polarizasyon açılımı, Miller kuralı
-- `opticspy.nonlinear_optics_boyd.coupled_wave_mixing` — üç dalga karışımı, Manley-Rowe ilişkileri
-- `opticspy.nonlinear_optics_boyd.two_level_atom` — iki seviyeli atom doygunluğu
-- `opticspy.nonlinear_optics_boyd.self_action` — öz-odaklanma, Marburger formülü
-- `opticspy.nonlinear_optics_boyd.stimulated_scattering` — uyarılmış Raman/Brillouin saçılması
-- `opticspy.nonlinear_optics_boyd.multiphoton_absorption` — iki foton soğurma
+- `aoptics.nonlinear_optics_boyd.susceptibility` — polarizasyon açılımı, Miller kuralı
+- `aoptics.nonlinear_optics_boyd.coupled_wave_mixing` — üç dalga karışımı, Manley-Rowe ilişkileri
+- `aoptics.nonlinear_optics_boyd.two_level_atom` — iki seviyeli atom doygunluğu
+- `aoptics.nonlinear_optics_boyd.self_action` — öz-odaklanma, Marburger formülü
+- `aoptics.nonlinear_optics_boyd.stimulated_scattering` — uyarılmış Raman/Brillouin saçılması
+- `aoptics.nonlinear_optics_boyd.multiphoton_absorption` — iki foton soğurma
 
 ## Bilinçli olarak dışarıda bırakılan konular
 
@@ -81,7 +81,7 @@ Rayleigh limiti kapsanmıştır), ayrıntılı mod kilitli ultra hızlı darbe d
 
 ## Kurulum
 ```bash
-pip install opticspy-research
+pip install aoptics
 ```
 
 ## Bakımcılar için: PyPI'ye yayınlama
@@ -92,7 +92,7 @@ oluşturulan her yeni Release otomatik olarak PyPI'ye yayınlanır.
 
 ## Hızlı başlangıç
 ```python
-import opticspy as op
+import aoptics as op
 import numpy as np
 
 # Laguerre-Gauss demeti oluştur
@@ -106,7 +106,7 @@ I, phase, vis = op.interference.two_beam_interference(lg, ref)
 op.utils.show_interference(I, phase)
 
 # Seidel aberasyonlu basit bir mercek (Faz 1)
-from opticspy.geometrical import ray_tracing as rt, aberrations as ab
+from aoptics.geometrical import ray_tracing as rt, aberrations as ab
 surfaces = [rt.Surface(radius=51.5, thickness=5.3, index=1.5168, semi_diameter=12.5),
             rt.Surface(radius=np.inf, thickness=0.0, index=1.0, semi_diameter=12.5)]
 system = rt.OpticalSystem(surfaces)
@@ -123,3 +123,5 @@ python examples/phase6_boyd_nonlinear_demo.py
 ## Lisans
 
 MIT — bkz. [LICENSE](LICENSE).
+
+

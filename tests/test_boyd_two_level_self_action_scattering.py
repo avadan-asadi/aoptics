@@ -1,10 +1,10 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.nonlinear_optics_boyd import two_level_atom as tla
-from opticspy.nonlinear_optics_boyd import self_action as sa
-from opticspy.nonlinear_optics_boyd import stimulated_scattering as ss
-from opticspy.nonlinear_optics_boyd import multiphoton_absorption as tpa
+from aoptics.nonlinear_optics_boyd import two_level_atom as tla
+from aoptics.nonlinear_optics_boyd import self_action as sa
+from aoptics.nonlinear_optics_boyd import stimulated_scattering as ss
+from aoptics.nonlinear_optics_boyd import multiphoton_absorption as tpa
 
 
 # --------------------------- two-level atom ---------------------------
@@ -151,3 +151,4 @@ def test_saturable_absorber_transmission_increases_with_intensity():
     T_high = tpa.saturable_absorber_transmission(100.0, alpha0=0.5, saturation_intensity=1.0)
     assert T_high > T_low
     assert T_high == pytest.approx(1.0, abs=0.01)
+

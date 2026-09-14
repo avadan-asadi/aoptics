@@ -1,8 +1,8 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.nonlinear_optics_boyd import susceptibility as sus
-from opticspy.nonlinear_optics_boyd import coupled_wave_mixing as cwm
+from aoptics.nonlinear_optics_boyd import susceptibility as sus
+from aoptics.nonlinear_optics_boyd import coupled_wave_mixing as cwm
 
 
 # --------------------------- susceptibility ---------------------------
@@ -97,3 +97,4 @@ def test_phase_mismatch_reduces_conversion():
     _, _, _, A3_matched = cwm.simulate_three_wave_mixing(delta_k=0.0, **kwargs)
     _, _, _, A3_mismatched = cwm.simulate_three_wave_mixing(delta_k=200.0, **kwargs)
     assert np.abs(A3_matched[-1]) > np.abs(A3_mismatched[-1])
+

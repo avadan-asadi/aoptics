@@ -1,5 +1,5 @@
-"""
-Phase 4 demo -- opticspy.qoptics
+﻿"""
+Phase 4 demo -- aoptics.qoptics
 ===================================
 (1) Jaynes-Cummings: vacuum Rabi oscillation (Fock field) vs.
     collapse-and-revival (coherent-state field).
@@ -16,9 +16,9 @@ Run:  python examples/phase4_qoptics_demo.py
 import numpy as np
 import matplotlib.pyplot as plt
 
-from opticspy.qoptics import jaynes_cummings as jc, master_equation as me
-from opticspy.qoptics import beamsplitter as bs, coherence_functions as cf
-from opticspy.quantum import fock_state, coherent_state, cat_state, wigner_function
+from aoptics.qoptics import jaynes_cummings as jc, master_equation as me
+from aoptics.qoptics import beamsplitter as bs, coherence_functions as cf
+from aoptics.quantum import fock_state, coherent_state, cat_state, wigner_function
 
 # ---- 1) Jaynes-Cummings: Fock-state Rabi vs coherent-state collapse/revival ----
 field_dim = 60
@@ -61,7 +61,7 @@ thetas = np.linspace(0, np.pi / 2, 60)
 p11 = [bs.hong_ou_mandel_coincidence_probability(dim=6, theta=th) for th in thetas]
 
 # ---- 4) g2(0) comparison ----
-from opticspy.quantum import thermal_state
+from aoptics.quantum import thermal_state
 states = {
     "Fock |1>": fock_state(1, 20),
     "Fock |3>": fock_state(3, 20),
@@ -104,3 +104,4 @@ fig.colorbar(im, ax=axes[1, 1], shrink=0.8)
 fig.tight_layout()
 fig.savefig("phase4_qoptics_demo.png", dpi=140)
 print("\nSaved figure: phase4_qoptics_demo.png")
+

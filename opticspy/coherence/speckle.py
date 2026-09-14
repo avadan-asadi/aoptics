@@ -1,5 +1,5 @@
-"""
-opticspy.coherence.speckle
+﻿"""
+aoptics.coherence.speckle
 ============================
 Statistics of laser speckle: the intensity of "fully developed" speckle
 (many independent unit-amplitude, uniformly-random-phase contributions,
@@ -101,3 +101,4 @@ def speckle_size_imaging(wavelength, f_number, magnification=0.0):
     magnification: 1.22 * (1 + magnification) * wavelength * f_number.
     """
     return 1.22 * (1.0 + magnification) * wavelength * f_number
+

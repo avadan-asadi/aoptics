@@ -1,5 +1,5 @@
-"""
-opticspy.electromagnetic.polarization
+﻿"""
+aoptics.electromagnetic.polarization
 ======================================
 Jones calculus (fully polarized light) and Stokes/Mueller calculus
 (partially polarized light), plus the Poincare-sphere representation.
@@ -206,3 +206,4 @@ def jones_to_mueller(J):
     K = np.kron(J, np.conj(J))
     M = A @ K @ Ainv
     return np.real(M)
+

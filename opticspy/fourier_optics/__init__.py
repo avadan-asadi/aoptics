@@ -1,5 +1,5 @@
-"""
-opticspy.fourier_optics
+﻿"""
+aoptics.fourier_optics
 ==========================
 Fourier-optics description of imaging systems: pupil function,
 coherent/incoherent PSF, coherent transfer function (CTF), optical/
@@ -13,3 +13,4 @@ Reference: Goodman, "Introduction to Fourier Optics"; Saleh & Teich,
 from . import transfer_functions, spatial_filtering
 
 __all__ = ["transfer_functions", "spatial_filtering"]
+

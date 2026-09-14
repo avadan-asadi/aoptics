@@ -1,5 +1,5 @@
-"""
-opticspy.qoptics.coherence_functions
+﻿"""
+aoptics.qoptics.coherence_functions
 =======================================
 Quantum degree-of-second-order-coherence g^(2)(0) and related photon-
 statistics measures for a single-mode field state, computed directly
@@ -50,3 +50,4 @@ def fano_factor(state_or_rho):
     mean_n = np.sum(n * P_n)
     var_n = np.sum(n ** 2 * P_n) - mean_n ** 2
     return float(var_n / mean_n) if mean_n > 0 else np.nan
+

@@ -1,5 +1,5 @@
-"""
-opticspy.nonlinear_optics_boyd.susceptibility
+﻿"""
+aoptics.nonlinear_optics_boyd.susceptibility
 =================================================
 The nonlinear optical susceptibility: the perturbative expansion of the
 induced polarization in powers of the applied field, the conventional
@@ -86,3 +86,4 @@ def is_symmetric_chi2_tensor(chi2_tensor, atol=1e-8):
         if not np.allclose(t, np.transpose(t, p), atol=atol):
             return False
     return True
+

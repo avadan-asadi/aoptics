@@ -1,7 +1,7 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.coherence import temporal, spatial, speckle
+from aoptics.coherence import temporal, spatial, speckle
 
 
 # --------------------------- temporal coherence ---------------------------
@@ -143,3 +143,4 @@ def test_speckle_size_formulas_are_consistent_with_vcz_form():
     s1 = speckle.speckle_size_free_space(wavelength, distance, D)
     s2 = spatial.coherence_radius_circular_source(wavelength, distance, D)
     assert s1 == pytest.approx(s2)
+

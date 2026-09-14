@@ -1,5 +1,5 @@
-"""
-opticspy.electromagnetic
+﻿"""
+aoptics.electromagnetic
 =========================
 Electromagnetic/vector aspects of light: Fresnel reflection/transmission
 at interfaces, polarization optics (Jones and Stokes/Mueller calculus),
@@ -12,3 +12,4 @@ Saleh & Teich, "Fundamentals of Photonics", Chapter 6.
 from . import fresnel, polarization, crystal_optics
 
 __all__ = ["fresnel", "polarization", "crystal_optics"]
+

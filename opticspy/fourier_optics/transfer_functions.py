@@ -1,5 +1,5 @@
-"""
-opticspy.fourier_optics.transfer_functions
+﻿"""
+aoptics.fourier_optics.transfer_functions
 =============================================
 Diffraction-limited imaging in Fourier-optics language: the pupil
 function, coherent/incoherent point-spread functions, the coherent
@@ -86,3 +86,4 @@ def rayleigh_resolution(wavelength, NA):
 def abbe_resolution(wavelength, NA):
     """Abbe diffraction limit: wavelength / (2 * NA)."""
     return wavelength / (2 * NA)
+

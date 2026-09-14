@@ -1,13 +1,13 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.qoptics import operators as ops
-from opticspy.qoptics import jaynes_cummings as jc
-from opticspy.qoptics import master_equation as me
-from opticspy.qoptics import beamsplitter as bs
-from opticspy.qoptics import coherence_functions as cf
-from opticspy.qoptics import entanglement as ent
-from opticspy.quantum import fock_state, coherent_state, thermal_state, bell_state
+from aoptics.qoptics import operators as ops
+from aoptics.qoptics import jaynes_cummings as jc
+from aoptics.qoptics import master_equation as me
+from aoptics.qoptics import beamsplitter as bs
+from aoptics.qoptics import coherence_functions as cf
+from aoptics.qoptics import entanglement as ent
+from aoptics.quantum import fock_state, coherent_state, thermal_state, bell_state
 
 
 # --------------------------- operators ---------------------------
@@ -226,3 +226,4 @@ def test_concurrence_bell_state_is_one():
     psi = bell_state('phi-')
     rho = ent.density_matrix_from_state(psi)
     assert ent.concurrence(rho) == pytest.approx(1.0, rel=1e-6)
+

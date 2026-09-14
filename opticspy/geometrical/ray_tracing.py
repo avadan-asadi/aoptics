@@ -1,5 +1,5 @@
-"""
-opticspy.geometrical.ray_tracing
+﻿"""
+aoptics.geometrical.ray_tracing
 =================================
 Paraxial (Gaussian) matrix optics and exact real ray tracing through
 rotationally-symmetric optical systems made of spherical / conic surfaces.
@@ -504,3 +504,4 @@ def ray_fan(system: OpticalSystem, object_height: float, aperture_semi_diameter:
         P_img = P_last + t * d_last
         errors[i] = P_img[1] - ideal_y
     return pupil_frac, errors
+

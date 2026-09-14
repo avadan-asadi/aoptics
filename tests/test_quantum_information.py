@@ -1,7 +1,7 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.qoptics import quantum_information as qi
+from aoptics.qoptics import quantum_information as qi
 
 
 # --------------------------- gates ---------------------------
@@ -79,3 +79,4 @@ def test_bb84_sifted_fraction_near_half():
     result = qi.bb84_simulate(5000, eavesdrop=False, rng=rng)
     frac = result['n_sifted'] / 5000
     assert 0.4 < frac < 0.6
+

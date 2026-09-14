@@ -1,5 +1,5 @@
-"""
-opticspy.nonlinear_optics_boyd.stimulated_scattering
+﻿"""
+aoptics.nonlinear_optics_boyd.stimulated_scattering
 ========================================================
 Stimulated Raman and stimulated Brillouin scattering: frequency shifts,
 gain, and the standard exponential-gain threshold criteria
@@ -83,3 +83,4 @@ def raman_shift_wavenumber_to_frequency(wavenumber_cm_inv, c=299_792_458.0):
     """Convert a Raman shift quoted in wavenumbers (cm^-1, as is conventional
     in the Raman-spectroscopy literature) to a frequency shift in Hz: f = c * (wavenumber in 1/m)."""
     return c * (wavenumber_cm_inv * 100.0)
+

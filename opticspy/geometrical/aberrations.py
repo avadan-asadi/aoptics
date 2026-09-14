@@ -1,5 +1,5 @@
-"""
-opticspy.geometrical.aberrations
+﻿"""
+aoptics.geometrical.aberrations
 =================================
 Third-order (Seidel) monochromatic aberration theory for rotationally
 symmetric optical systems, computed from two paraxial rays (the marginal
@@ -200,3 +200,4 @@ def petzval_curvature(system: OpticalSystem) -> float:
 def petzval_radius(system: OpticalSystem) -> float:
     P = petzval_curvature(system)
     return np.inf if abs(P) < 1e-14 else -1.0 / P
+

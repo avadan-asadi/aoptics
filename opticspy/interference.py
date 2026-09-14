@@ -1,5 +1,5 @@
-"""
-opticspy.interference
+﻿"""
+aoptics.interference
 =====================
 Two-beam and multi-beam interference patterns, fringe analysis,
 and phase reconstruction.
@@ -278,3 +278,4 @@ def reconstruct_hologram(hologram, wavelength=633e-9, z_rec=0.1, L=1e-3):
     from .propagation import fresnel_propagate
     recon = fresnel_propagate(hologram.astype(complex), z_rec, wavelength, L)
     return recon
+

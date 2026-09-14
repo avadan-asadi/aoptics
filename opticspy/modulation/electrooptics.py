@@ -1,5 +1,5 @@
-"""
-opticspy.modulation.electrooptics
+﻿"""
+aoptics.modulation.electrooptics
 ====================================
 The linear electro-optic (Pockels) effect: field-induced refractive-
 index change, phase retardation in a Pockels cell, the half-wave
@@ -60,3 +60,4 @@ def eo_modulator_bandwidth_limit(electrode_length, n_microwave, n_optical, c=299
     if mismatch == 0:
         return np.inf
     return 1.4 * c / (np.pi * electrode_length * mismatch)
+

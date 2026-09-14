@@ -1,5 +1,5 @@
-"""
-opticspy.sources_detectors.lasers
+﻿"""
+aoptics.sources_detectors.lasers
 ====================================
 Four-level laser rate equations: population inversion N(t) and cavity
 photon number phi(t) coupled through stimulated emission, integrated
@@ -99,3 +99,4 @@ def slope_efficiency(tau_photon, gain_coeff, tau_2, photon_energy, pump_photon_e
     pump photon energy sets the quantum-limited slope efficiency.)
     """
     return output_coupling_fraction * photon_energy / pump_photon_energy
+

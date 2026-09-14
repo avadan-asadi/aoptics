@@ -1,5 +1,5 @@
-"""
-opticspy.photonics.fibers
+﻿"""
+aoptics.photonics.fibers
 ===========================
 Step-index optical fiber parameters: V-number, numerical aperture,
 mode count, single-mode cutoff, mode-field diameter, and chromatic
@@ -115,3 +115,4 @@ def pulse_broadening_material(length, spectral_width, wavelength, index_fn=sellm
     """
     D = material_dispersion_parameter(index_fn, wavelength)
     return abs(D) * length * spectral_width
+

@@ -1,11 +1,11 @@
-"""
-opticspy.qoptics.operators
+﻿"""
+aoptics.qoptics.operators
 =============================
 Field operators in a truncated (dimension-N) single-mode Fock basis:
 annihilation/creation operators, the number operator, quadratures, and
 the displacement/squeeze operators built by exponentiating their
 generators (matching how coherent/squeezed states are defined in
-opticspy.quantum).
+aoptics.quantum).
 
 Reference: Gerry & Knight, "Introductory Quantum Optics", Ch. 2-3
 (quantization of the field, quadrature operators, displaced and
@@ -84,3 +84,4 @@ def heisenberg_uncertainty_product(state, dim):
     varX = np.real(variance(X, state))
     varP = np.real(variance(P, state))
     return varX * varP
+

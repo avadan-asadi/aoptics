@@ -1,4 +1,4 @@
-"""
+﻿"""
 Phase 5 demo -- remaining chapters: Fourier optics, lasers/detectors,
 modulation, scattering, and photonic crystals.
 =====================================================================
@@ -13,10 +13,10 @@ Run:  python examples/phase5_extended_demo.py
 import numpy as np
 import matplotlib.pyplot as plt
 
-from opticspy.fourier_optics import transfer_functions as tf
-from opticspy.sources_detectors import lasers
-from opticspy.scattering import rayleigh_scattering as rs
-from opticspy.photonics import photonic_crystals as pc
+from aoptics.fourier_optics import transfer_functions as tf
+from aoptics.sources_detectors import lasers
+from aoptics.scattering import rayleigh_scattering as rs
+from aoptics.photonics import photonic_crystals as pc
 
 # ---- 1) Diffraction-limited PSF / MTF ----
 N, L = 256, 1.0
@@ -85,3 +85,4 @@ axes[1, 1].legend(fontsize=7, loc='upper left')
 fig.tight_layout()
 fig.savefig("phase5_extended_demo.png", dpi=140)
 print("\nSaved figure: phase5_extended_demo.png")
+

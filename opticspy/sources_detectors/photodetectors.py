@@ -1,5 +1,5 @@
-"""
-opticspy.sources_detectors.photodetectors
+﻿"""
+aoptics.sources_detectors.photodetectors
 ============================================
 Core photodetector figures of merit: responsivity, quantum efficiency,
 photocurrent, and the two fundamental noise mechanisms (shot noise,
@@ -63,3 +63,4 @@ def signal_to_noise_ratio(optical_power, quantum_efficiency, wavelength,
     I_signal = R * optical_power
     I_noise = total_noise_current(I_signal, bandwidth, temperature, load_resistance)
     return I_signal / I_noise
+

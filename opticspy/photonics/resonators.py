@@ -1,11 +1,11 @@
-"""
-opticspy.photonics.resonators
+﻿"""
+aoptics.photonics.resonators
 ===============================
 Fabry-Perot resonators (Airy function transmission, finesse, free
 spectral range, linewidth, Q factor) and general two-mirror laser
 resonators: stability via the g-parameters, and the self-consistent
 Gaussian-beam mode found from the cavity's round-trip ABCD matrix
-(reusing `opticspy.geometrical.ray_tracing`).
+(reusing `aoptics.geometrical.ray_tracing`).
 
 Reference: Saleh & Teich, "Fundamentals of Photonics", Ch. 7 (Beam
 Optics / resonators) and Ch. 9-10 discussions of the Fabry-Perot etalon;
@@ -14,7 +14,7 @@ Yariv, "Quantum Electronics", for the ABCD self-consistency law.
 
 import numpy as np
 
-from opticspy.geometrical import ray_tracing as rt
+from aoptics.geometrical import ray_tracing as rt
 
 C_LIGHT = 299_792_458.0  # m/s
 
@@ -81,7 +81,7 @@ def round_trip_matrix(L, R1, R2):
     """
     Build the cavity round-trip ABCD matrix (starting just after mirror
     1, propagating to mirror 2, reflecting, back to mirror 1, reflecting)
-    by composing `opticspy.geometrical.ray_tracing` building blocks.
+    by composing `aoptics.geometrical.ray_tracing` building blocks.
     """
     M_prop = rt.free_space_matrix(L)
     M1 = rt.mirror_matrix(R1)
@@ -165,3 +165,4 @@ def symmetric_confocal_waist_at_mirror(L, wavelength):
     """Closed-form spot size AT THE MIRRORS of a symmetric confocal
     resonator: w(mirror)^2 = wavelength*L/pi = 2 * w0_center^2."""
     return np.sqrt(wavelength * L / np.pi)
+

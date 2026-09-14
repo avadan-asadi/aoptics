@@ -1,5 +1,5 @@
-"""
-Phase 1 demo -- opticspy.electromagnetic
+﻿"""
+Phase 1 demo -- aoptics.electromagnetic
 =========================================
 Fresnel reflectance vs angle for an air-glass interface, Malus's law
 through a rotating analyzer, a quarter-wave plate turning linear light
@@ -12,7 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 (registers 3d projection)
 
-from opticspy.electromagnetic import fresnel, polarization as pol, crystal_optics as co
+from aoptics.electromagnetic import fresnel, polarization as pol, crystal_optics as co
 
 n1, n2 = 1.0, 1.5168  # air -> BK7 glass
 
@@ -81,3 +81,4 @@ ax3.legend(fontsize=7)
 fig.tight_layout()
 fig.savefig("phase1_polarization_demo.png", dpi=140)
 print("\nSaved figure: phase1_polarization_demo.png")
+

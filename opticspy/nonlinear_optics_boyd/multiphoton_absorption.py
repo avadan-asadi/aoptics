@@ -1,5 +1,5 @@
-"""
-opticspy.nonlinear_optics_boyd.multiphoton_absorption
+﻿"""
+aoptics.nonlinear_optics_boyd.multiphoton_absorption
 =========================================================
 Two-photon absorption (TPA): the nonlinear (intensity-squared) term
 added to the Beer-Lambert propagation equation, its effective
@@ -66,3 +66,4 @@ def two_photon_absorption_cross_section_rate(beta_tpa, photon_energy, n_density)
         coefficient = beta / (2 * photon_energy * n_density)
     """
     return beta_tpa / (2 * photon_energy * n_density)
+

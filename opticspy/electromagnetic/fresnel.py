@@ -1,5 +1,5 @@
-"""
-opticspy.electromagnetic.fresnel
+﻿"""
+aoptics.electromagnetic.fresnel
 =================================
 Fresnel reflection/transmission coefficients for a plane interface
 between two homogeneous isotropic media, including total internal
@@ -101,3 +101,4 @@ def tir_phase_shift(theta_i, n1, n2, polarization='s'):
     r_s, r_p, _, _ = fresnel_coefficients(theta_i, n1, n2)
     r = r_s if polarization == 's' else r_p
     return np.angle(r)
+

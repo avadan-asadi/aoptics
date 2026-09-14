@@ -1,10 +1,10 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.photonics import waveguides as wg
-from opticspy.photonics import fibers
-from opticspy.photonics import resonators as res
-from opticspy.photonics import nonlinear_optics as nl
+from aoptics.photonics import waveguides as wg
+from aoptics.photonics import fibers
+from aoptics.photonics import resonators as res
+from aoptics.photonics import nonlinear_optics as nl
 
 
 # --------------------------- planar waveguides ---------------------------
@@ -213,3 +213,4 @@ def test_soliton_order_fundamental():
 def test_fwm_phase_mismatch_zero_for_degenerate_case():
     k = 1.2345
     assert nl.four_wave_mixing_phase_mismatch(k, k, k, k) == pytest.approx(0.0)
+

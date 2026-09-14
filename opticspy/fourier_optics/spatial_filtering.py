@@ -1,5 +1,5 @@
-"""
-opticspy.fourier_optics.spatial_filtering
+﻿"""
+aoptics.fourier_optics.spatial_filtering
 ============================================
 The coherent 4f imaging/spatial-filtering system: an input transparency
 illuminated coherently, Fourier-transformed by a first lens onto a
@@ -64,3 +64,4 @@ def phase_contrast_mask(N, phase_shift=np.pi / 2, dc_radius_fraction=0.02):
     mask = np.ones((N, N), dtype=complex)
     mask[R <= dc_radius_fraction] = np.exp(1j * phase_shift)
     return mask
+

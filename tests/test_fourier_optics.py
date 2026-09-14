@@ -1,7 +1,7 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.fourier_optics import transfer_functions as tf, spatial_filtering as sf
+from aoptics.fourier_optics import transfer_functions as tf, spatial_filtering as sf
 
 
 def test_pupil_function_is_binary_and_centered():
@@ -63,3 +63,4 @@ def test_high_pass_mask_is_complement_of_low_pass():
     lp = sf.low_pass_filter_mask(N, 0.3)
     hp = sf.high_pass_filter_mask(N, 0.3)
     assert np.allclose(lp + hp, np.ones((N, N)))
+

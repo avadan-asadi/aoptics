@@ -1,5 +1,5 @@
-"""
-opticspy.nonlinear_optics_boyd.two_level_atom
+﻿"""
+aoptics.nonlinear_optics_boyd.two_level_atom
 =================================================
 Nonlinear optics in the two-level approximation: the saturated,
 power-broadened Lorentzian absorption/dispersion lineshape that results
@@ -71,3 +71,4 @@ def saturation_intensity_estimate(photon_energy, cross_section, upper_state_life
     estimate used throughout laser physics.
     """
     return photon_energy / (cross_section * upper_state_lifetime)
+

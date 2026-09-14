@@ -1,7 +1,7 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.sources_detectors import lasers, photodetectors as pd
+from aoptics.sources_detectors import lasers, photodetectors as pd
 
 
 # --------------------------- lasers ---------------------------
@@ -78,3 +78,4 @@ def test_snr_increases_with_optical_power():
     snr1 = pd.signal_to_noise_ratio(1e-6, 0.8, 1550e-9, 1e6, 300, 1e3)
     snr2 = pd.signal_to_noise_ratio(1e-3, 0.8, 1550e-9, 1e6, 300, 1e3)
     assert snr2 > snr1
+

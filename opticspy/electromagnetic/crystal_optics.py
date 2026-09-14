@@ -1,5 +1,5 @@
-"""
-opticspy.electromagnetic.crystal_optics
+﻿"""
+aoptics.electromagnetic.crystal_optics
 ========================================
 Uniaxial crystal optics: the index ellipsoid, birefringence, waveplate
 design, and spatial walk-off of the extraordinary ray.
@@ -107,3 +107,4 @@ def ordinary_extraordinary_split_angle(theta_incident, no, ne, n_medium=1.0):
             break
         theta_e = theta_e_new
     return theta_o, theta_e
+

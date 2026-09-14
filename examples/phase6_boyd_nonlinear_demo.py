@@ -1,5 +1,5 @@
-"""
-Phase 6 demo -- opticspy.nonlinear_optics_boyd
+﻿"""
+Phase 6 demo -- aoptics.nonlinear_optics_boyd
 =================================================
 (1) Sum-frequency generation: coupled-wave amplitude growth and the
     Manley-Rowe photon-flux conservation check.
@@ -13,7 +13,7 @@ Run:  python examples/phase6_boyd_nonlinear_demo.py
 import numpy as np
 import matplotlib.pyplot as plt
 
-from opticspy.nonlinear_optics_boyd import (coupled_wave_mixing as cwm, two_level_atom as tla,
+from aoptics.nonlinear_optics_boyd import (coupled_wave_mixing as cwm, two_level_atom as tla,
                                              self_action as sa, multiphoton_absorption as tpa)
 
 # ---- 1) SFG coupled-wave growth + Manley-Rowe ----
@@ -77,3 +77,4 @@ axes[1, 1].set_title("Two-photon-absorption nonlinear transmission")
 fig.tight_layout()
 fig.savefig("phase6_boyd_nonlinear_demo.png", dpi=140)
 print("\nSaved figure: phase6_boyd_nonlinear_demo.png")
+

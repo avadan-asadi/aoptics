@@ -1,10 +1,10 @@
-"""
-opticspy.qoptics.entanglement
+﻿"""
+aoptics.qoptics.entanglement
 ================================
 Quantum-information tools for finite-dimensional systems: partial
 trace, von Neumann entropy, purity, fidelity, and Schmidt decomposition
 of a bipartite pure state -- plus re-exports of the Bell-state and
-concurrence helpers already in `opticspy.quantum` so this subpackage is
+concurrence helpers already in `aoptics.quantum` so this subpackage is
 a single entry point for entanglement/quantum-information work.
 
 Reference: Gerry & Knight, "Introductory Quantum Optics", Ch. 7
@@ -13,7 +13,7 @@ Reference: Gerry & Knight, "Introductory Quantum Optics", Ch. 7
 
 import numpy as np
 
-from opticspy.quantum import bell_state, concurrence  # re-exported
+from aoptics.quantum import bell_state, concurrence  # re-exported
 
 __all__ = ["bell_state", "concurrence", "partial_trace", "von_neumann_entropy",
            "purity", "fidelity", "schmidt_decomposition", "schmidt_number",
@@ -91,3 +91,4 @@ def schmidt_number(psi, dim_a, dim_b):
     S = S / np.linalg.norm(S)
     p = S ** 2
     return 1.0 / np.sum(p ** 2)
+

@@ -1,5 +1,5 @@
-"""
-opticspy.photonics.nonlinear_optics
+﻿"""
+aoptics.photonics.nonlinear_optics
 =====================================
 Core quantities of chi(2) (second-harmonic generation, phase matching)
 and chi(3) (Kerr effect / self-phase modulation, four-wave mixing)
@@ -124,3 +124,4 @@ def soliton_order(gamma, power, T0, beta2):
 def dispersion_length(T0, beta2):
     """Fiber dispersion length L_D = T0^2 / |beta2|."""
     return T0 ** 2 / abs(beta2)
+

@@ -1,11 +1,11 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.photonics import photonic_crystals as pc
+from aoptics.photonics import photonic_crystals as pc
 
 
 def test_no_layers_reduces_to_single_interface_fresnel():
-    from opticspy.electromagnetic import fresnel
+    from aoptics.electromagnetic import fresnel
     n_inc, n_sub = 1.0, 1.5
     result = pc.multilayer_reflectance([], 500e-9, n_incident=n_inc, n_substrate=n_sub)
     expected_R = fresnel.normal_incidence_reflectance(n_inc, n_sub)
@@ -52,3 +52,4 @@ def test_stopband_edges_bracket_high_reflectance_region():
     R_mid = pc.multilayer_reflectance(layers, wl0, n_substrate=1.5)['R']
     R_outside = pc.multilayer_reflectance(layers, hi * 1.15, n_substrate=1.5)['R']
     assert R_mid > R_outside
+

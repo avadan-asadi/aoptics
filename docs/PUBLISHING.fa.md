@@ -1,11 +1,11 @@
-# راهنمای انتشار (فارسی)
+﻿# راهنمای انتشار (فارسی)
 
-این راهنما تمام مراحل لازم برای ساخت بسته **opticspy-research**، آپلود آن در PyPI، و
+این راهنما تمام مراحل لازم برای ساخت بسته **aoptics**، آپلود آن در PyPI، و
 راه‌اندازی **انتشار خودکار** را پوشش می‌دهد — به‌طوری‌که هر انتشار (Release) جدید در گیت‌هاب
 خودش را به‌صورت خودکار در PyPI منتشر کند، بدون نیاز به `twine upload` دستی پس از راه‌اندازی اولیه.
 
-پکیج پایتونی که با `import opticspy` فراخوانی می‌شود، در PyPI با نام **`opticspy-research`**
-منتشر می‌شود (نام ساده `opticspy` قبلاً توسط پروژه دیگری اشغال شده است).
+پکیج پایتونی که با `import aoptics` فراخوانی می‌شود، در PyPI با نام **`aoptics`**
+منتشر می‌شود (نام ساده `aoptics` قبلاً توسط پروژه دیگری اشغال شده است).
 
 ---
 
@@ -23,7 +23,7 @@
 ## ۱. ساخت و بررسی بسته به‌صورت محلی
 
 ```bash
-cd opticspy-research/          # پوشه‌ای که pyproject.toml در آن است
+cd aoptics/          # پوشه‌ای که pyproject.toml در آن است
 python -m pip install --upgrade build twine
 python -m build                # فایل‌های dist/*.whl و dist/*.tar.gz را می‌سازد
 twine check dist/*             # صحت متادیتا/رندر توضیحات را بررسی می‌کند
@@ -48,8 +48,8 @@ twine upload --repository testpypi dist/*
 
 # ۲) نصب از TestPyPI در یک محیط مجازی تمیز برای تأیید
 python -m venv /tmp/test_env && source /tmp/test_env/bin/activate
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ opticspy-research
-python -c "import opticspy; print(opticspy.__version__)"
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ aoptics
+python -c "import aoptics; print(aoptics.__version__)"
 deactivate
 
 # ۳) اگر همه‌چیز درست بود، در PyPI واقعی آپلود کنید
@@ -60,7 +60,7 @@ twine upload dist/*
 **دریافت توکن API:** تنظیمات حساب PyPI ← «API tokens» ← «Add API token». پس از اولین آپلود
 (که نیاز به توکن در سطح کل حساب دارد)، می‌توانید دامنه توکن را محدود به همین پروژه کنید.
 
-پس از این آپلود دستی اول، دستور `pip install opticspy-research` برای همه کار می‌کند.
+پس از این آپلود دستی اول، دستور `pip install aoptics` برای همه کار می‌کند.
 
 ---
 
@@ -74,18 +74,18 @@ twine upload dist/*
 ### ۳.۱ راه‌اندازی یک‌باره: اتصال گیت‌هاب به PyPI (Trusted Publishing)
 
 ۱. به صفحه پروژه خود در PyPI بروید:
-   `https://pypi.org/manage/project/opticspy-research/settings/publishing/`
+   `https://pypi.org/manage/project/aoptics/settings/publishing/`
    (باید آپلود دستی اول از بخش ۲ را قبلاً انجام داده باشید تا پروژه وجود داشته باشد).
 ۲. در بخش «Trusted Publishers»، روی «Add a new publisher» کلیک کنید و موارد زیر را وارد کنید:
    - Owner: نام کاربری/سازمان گیت‌هاب شما
-   - Repository name: نام مخزن شما (مثلاً `opticspy-research`)
+   - Repository name: نام مخزن شما (مثلاً `aoptics`)
    - Workflow name: `publish.yml`
    - Environment name: `pypi`
 ۳. ذخیره کنید. همین — نیازی به کپی هیچ توکنی نیست.
 
 ### ۳.۲ نحوه فعال‌شدن انتشار با یک Release
 
-۱. شماره نسخه را در فایل **`opticspy/__init__.py`** افزایش دهید (مثلاً `__version__ = "2.2.0"`) —
+۱. شماره نسخه را در فایل **`aoptics/__init__.py`** افزایش دهید (مثلاً `__version__ = "2.2.0"`) —
    این تنها منبع حقیقت نسخه است؛ `pyproject.toml` آن را به‌صورت خودکار می‌خواند.
 ۲. یک ورودی متناظر در ابتدای فایل **`CHANGELOG.md`** اضافه کنید.
 ۳. کامیت کنید، سپس تگ بزنید و پوش کنید:
@@ -126,9 +126,11 @@ twine upload dist/*
 ## ۵. چک‌لیست سریع برای هر انتشار جدید
 
 - [ ] تغییرات کد در `main` ادغام شده و همه تست‌ها سبز است.
-- [ ] `opticspy/__init__.py`: مقدار `__version__` افزایش یافته.
+- [ ] `aoptics/__init__.py`: مقدار `__version__` افزایش یافته.
 - [ ] `CHANGELOG.md`: ورودی جدید اضافه شده.
 - [ ] `git tag vX.Y.Z && git push --tags`
 - [ ] در گیت‌هاب «Draft a new release» از همان تگ ← «Publish release».
 - [ ] در تب Actions منتظر بمانید تا اجرای `publish.yml` سبز شود.
-- [ ] با `pip install --upgrade opticspy-research` نسخه جدید را تأیید کنید.
+- [ ] با `pip install --upgrade aoptics` نسخه جدید را تأیید کنید.
+
+

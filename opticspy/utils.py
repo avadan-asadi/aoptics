@@ -1,5 +1,5 @@
-"""
-opticspy.utils
+﻿"""
+aoptics.utils
 ==============
 Visualization helpers and common utility functions.
 """
@@ -89,3 +89,4 @@ def power_in_bucket(field, radius_pixels):
     N = field.shape[0]; y,x = np.indices((N,N))
     r = np.sqrt((x-N//2)**2+(y-N//2)**2); I = np.abs(field)**2
     return float(I[r<=radius_pixels].sum()/(I.sum()+1e-30))
+

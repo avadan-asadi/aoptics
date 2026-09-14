@@ -1,7 +1,7 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.modulation import electrooptics as eo, acoustooptics as ao
+from aoptics.modulation import electrooptics as eo, acoustooptics as ao
 
 
 # --------------------------- electro-optics ---------------------------
@@ -74,3 +74,4 @@ def test_raman_nath_efficiency_zero_order_at_zero_parameter():
     eta1 = ao.raman_nath_diffraction_efficiency(1, 0.0)
     assert eta0 == pytest.approx(1.0)
     assert eta1 == pytest.approx(0.0)
+

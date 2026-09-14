@@ -1,5 +1,5 @@
-"""
-opticspy.scattering.rayleigh_scattering
+﻿"""
+aoptics.scattering.rayleigh_scattering
 ==========================================
 Rayleigh scattering by particles much smaller than the wavelength
 (dipole scattering): the scattering cross section and its characteristic
@@ -57,3 +57,4 @@ def relative_scattering_vs_wavelength(wavelengths, reference_wavelength=550e-9):
 def scattering_mean_free_path(number_density, cross_section):
     """Mean free path between scattering events: 1 / (N * sigma)."""
     return 1.0 / (number_density * cross_section)
+

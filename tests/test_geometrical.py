@@ -1,8 +1,8 @@
-import numpy as np
+﻿import numpy as np
 import pytest
 
-from opticspy.geometrical import ray_tracing as rt
-from opticspy.geometrical import aberrations as ab
+from aoptics.geometrical import ray_tracing as rt
+from aoptics.geometrical import aberrations as ab
 
 
 def test_free_space_matrix_translates_height():
@@ -182,3 +182,4 @@ def test_solve_marginal_ray_hits_target_height_exactly():
     trace = ab.solve_marginal_ray(system, object_distance=1000.0,
                                    stop_surface_index=0, aperture_semi_diameter=10.0)
     assert trace[0]['y'] == pytest.approx(10.0, rel=1e-9)
+

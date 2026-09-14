@@ -1,5 +1,5 @@
-"""
-Phase 1 demo -- opticspy.geometrical
+﻿"""
+Phase 1 demo -- aoptics.geometrical
 =====================================
 A plano-convex singlet lens: paraxial cardinal points, a real-ray spot
 diagram at the paraxial image plane, a meridional ray-aberration fan,
@@ -11,9 +11,9 @@ Run:  python examples/phase1_geometrical_demo.py
 import numpy as np
 import matplotlib.pyplot as plt
 
-import opticspy as op
-from opticspy.geometrical import ray_tracing as rt
-from opticspy.geometrical import aberrations as ab
+import aoptics as op
+from aoptics.geometrical import ray_tracing as rt
+from aoptics.geometrical import aberrations as ab
 
 # ---- Define a simple plano-convex singlet (BK7-like glass, n = 1.5168) ----
 n_glass = 1.5168
@@ -77,3 +77,4 @@ axes[1].set_title("Meridional ray-aberration fan (spherical aberration)")
 fig.tight_layout()
 fig.savefig("phase1_geometrical_demo.png", dpi=140)
 print("\nSaved figure: phase1_geometrical_demo.png")
+

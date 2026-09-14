@@ -1,5 +1,5 @@
-"""
-opticspy.coherence
+﻿"""
+aoptics.coherence
 ====================
 Coherence theory and statistical optics: temporal coherence
 (Wiener-Khinchin theorem, coherence time/length, interferograms),
@@ -13,3 +13,4 @@ Optics", Ch. 10.
 from . import temporal, spatial, speckle
 
 __all__ = ["temporal", "spatial", "speckle"]
+

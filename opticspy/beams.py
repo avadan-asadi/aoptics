@@ -1,5 +1,5 @@
-"""
-opticspy.beams - Laser beam generation
+﻿"""
+aoptics.beams - Laser beam generation
 """
 import numpy as np
 from scipy.special import genlaguerre, hermite, jv, airy as scipy_airy
@@ -77,3 +77,4 @@ def tophat_beam(N=512, L=1e-3, radius=100e-6):
 
 def intensity(field): return np.abs(field)**2
 def phase(field): return np.angle(field)
+

@@ -1,5 +1,5 @@
-"""
-Phase 3 demo -- opticspy.photonics
+﻿"""
+Phase 3 demo -- aoptics.photonics
 =====================================
 (1) Planar waveguide: exact TE mode effective indices vs. core thickness.
 (2) Optical fiber: V-number/mode-count vs wavelength, and the material
@@ -13,7 +13,7 @@ Run:  python examples/phase3_photonics_demo.py
 import numpy as np
 import matplotlib.pyplot as plt
 
-from opticspy.photonics import waveguides as wg, fibers, resonators as res, nonlinear_optics as nl
+from aoptics.photonics import waveguides as wg, fibers, resonators as res, nonlinear_optics as nl
 
 # ---- 1) Planar waveguide modes vs thickness ----
 wavelength = 1.0e-6
@@ -87,3 +87,4 @@ axes[1, 1].set_title("SHG phase-matching sinc^2 curve")
 fig.tight_layout()
 fig.savefig("phase3_photonics_demo.png", dpi=140)
 print("\nSaved figure: phase3_photonics_demo.png")
+

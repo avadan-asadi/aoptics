@@ -1,5 +1,5 @@
-"""
-opticspy.coherence.spatial
+﻿"""
+aoptics.coherence.spatial
 ============================
 Spatial coherence of light from an incoherent extended source, governed
 by the Van Cittert-Zernike theorem: the complex degree of spatial
@@ -88,3 +88,4 @@ def young_double_slit_visibility(slit_separation, wavelength, distance,
     else:
         raise ValueError("source_shape must be 'circular' or 'slit'")
     return np.abs(gamma)
+

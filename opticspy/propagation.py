@@ -1,5 +1,5 @@
-"""
-opticspy.propagation - Beam propagation methods
+﻿"""
+aoptics.propagation - Beam propagation methods
 """
 import numpy as np
 from .beams import make_grid
@@ -61,3 +61,4 @@ def bpm_propagate(field, n_profile, dz, steps, wavelength=633e-9, L=1e-3):
         current = np.fft.ifft2(np.fft.fft2(current)*H_free)
         fields.append(current.copy())
     return fields
+

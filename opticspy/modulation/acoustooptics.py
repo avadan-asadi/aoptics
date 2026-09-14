@@ -1,5 +1,5 @@
-"""
-opticspy.modulation.acoustooptics
+﻿"""
+aoptics.modulation.acoustooptics
 ====================================
 Acousto-optic diffraction of light by a traveling sound wave: the
 Klein-Cook parameter distinguishing the thin-grating (Raman-Nath) and
@@ -73,3 +73,4 @@ def normalized_bragg_efficiency(coupling_parameter):
     (the standard two-wave coupled-mode Bragg-diffraction result).
     """
     return np.sin(coupling_parameter) ** 2
+

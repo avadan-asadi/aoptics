@@ -1,11 +1,11 @@
-# Yayınlama Kılavuzu (Türkçe)
+﻿# Yayınlama Kılavuzu (Türkçe)
 
-Bu kılavuz, **opticspy-research** paketini oluşturmak, PyPI'ye yüklemek ve her yeni GitHub
+Bu kılavuz, **aoptics** paketini oluşturmak, PyPI'ye yüklemek ve her yeni GitHub
 Release'in kendiliğinden PyPI'ye yayınlanmasını sağlayan **otomatik yayınlama** sistemini
 kurmak için gereken her şeyi kapsar -- ilk kurulumdan sonra manuel `twine upload` gerekmez.
 
-`import opticspy` ile çağrılan Python paketi, PyPI'de **`opticspy-research`** adıyla
-dağıtılır (sade `opticspy` adı zaten başka, ilgisiz bir proje tarafından alınmıştır).
+`import aoptics` ile çağrılan Python paketi, PyPI'de **`aoptics`** adıyla
+dağıtılır (sade `aoptics` adı zaten başka, ilgisiz bir proje tarafından alınmıştır).
 
 ---
 
@@ -26,7 +26,7 @@ dağıtılır (sade `opticspy` adı zaten başka, ilgisiz bir proje tarafından 
 ## 1. Paketi yerel olarak oluşturma ve kontrol etme
 
 ```bash
-cd opticspy-research/          # pyproject.toml dosyasının bulunduğu klasör
+cd aoptics/          # pyproject.toml dosyasının bulunduğu klasör
 python -m pip install --upgrade build twine
 python -m build                # dist/*.whl ve dist/*.tar.gz dosyalarını oluşturur
 twine check dist/*             # meta veri/uzun açıklama render kontrolü yapar
@@ -52,8 +52,8 @@ twine upload --repository testpypi dist/*
 
 # 2) Doğrulamak için temiz bir venv'de TestPyPI'den kurun
 python -m venv /tmp/test_env && source /tmp/test_env/bin/activate
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ opticspy-research
-python -c "import opticspy; print(opticspy.__version__)"
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ aoptics
+python -c "import aoptics; print(aoptics.__version__)"
 deactivate
 
 # 3) Her şey doğruysa, gerçek PyPI'ye yükleyin
@@ -65,7 +65,7 @@ API token alma: PyPI hesap ayarları -> "API tokens" -> "Add API token". İlk y�
 genelinde bir token gerektirir; sonrasında token kapsamını yalnızca bu projeyle
 sınırlayabilirsiniz.
 
-Bu ilk manuel yüklemeden sonra `pip install opticspy-research` herkes için çalışır.
+Bu ilk manuel yüklemeden sonra `pip install aoptics` herkes için çalışır.
 
 ---
 
@@ -79,18 +79,18 @@ token'ı saklamaya gerek kalmadan -- PyPI'ye yükler.
 ### 3.1 Tek seferlik kurulum: GitHub'ı PyPI'ye bağlama (Trusted Publishing)
 
 1. PyPI'de projenize gidin:
-   `https://pypi.org/manage/project/opticspy-research/settings/publishing/`
+   `https://pypi.org/manage/project/aoptics/settings/publishing/`
    (projenin var olması için Bölüm 2'deki ilk manuel yüklemeyi yapmış olmanız gerekir).
 2. "Trusted Publishers" altında "Add a new publisher"a tıklayın ve şunları doldurun:
    - Owner: GitHub kullanıcı adınız/organizasyonunuz
-   - Repository name: depo adınız (örn. `opticspy-research`)
+   - Repository name: depo adınız (örn. `aoptics`)
    - Workflow name: `publish.yml`
    - Environment name: `pypi`
 3. Kaydedin. Bu kadar -- hiçbir yere token kopyalamaya gerek yok.
 
 ### 3.2 Bir release yayınının otomatik tetiklemesi
 
-1. **`opticspy/__init__.py`** dosyasındaki sürüm numarasını artırın (`__version__ = "2.2.0"`
+1. **`aoptics/__init__.py`** dosyasındaki sürüm numarasını artırın (`__version__ = "2.2.0"`
    gibi) -- bu tek gerçek kaynaktır; `pyproject.toml` bunu otomatik olarak okur.
 2. **`CHANGELOG.md`** dosyasının başına ilgili bir girdi ekleyin.
 3. Commit edin, sonra etiketleyip push edin:
@@ -132,9 +132,11 @@ yakalanır.
 ## 5. Her yeni sürüm için hızlı kontrol listesi
 
 - [ ] Kod değişiklikleri `main`e birleştirildi, tüm testler yeşil.
-- [ ] `opticspy/__init__.py`: `__version__` artırıldı.
+- [ ] `aoptics/__init__.py`: `__version__` artırıldı.
 - [ ] `CHANGELOG.md`: yeni girdi eklendi.
 - [ ] `git tag vX.Y.Z && git push --tags`
 - [ ] GitHub'da o etiketten "Draft a new release" -> "Publish release".
 - [ ] Actions sekmesinde `publish.yml` çalışmasının yeşile dönmesini izleyin.
-- [ ] `pip install --upgrade opticspy-research` ile yeni sürümü doğrulayın.
+- [ ] `pip install --upgrade aoptics` ile yeni sürümü doğrulayın.
+
+

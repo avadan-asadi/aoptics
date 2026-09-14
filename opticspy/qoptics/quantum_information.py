@@ -1,5 +1,5 @@
-"""
-opticspy.qoptics.quantum_information
+﻿"""
+aoptics.qoptics.quantum_information
 =======================================
 Qubit gates, the quantum teleportation protocol, and a simulation of
 the BB84 quantum-key-distribution protocol (including a simple
@@ -148,3 +148,4 @@ def bb84_simulate(n_bits, eavesdrop=False, rng=None):
 
     return dict(n_sifted=n_sifted, qber=qber, alice_bits=alice_bits, alice_bases=alice_bases,
                 bob_bases=bob_bases, bob_bits=bob_bits, sifted_mask=sifted_mask)
+

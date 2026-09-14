@@ -1,5 +1,5 @@
-"""
-opticspy.qoptics.beamsplitter
+﻿"""
+aoptics.qoptics.beamsplitter
 ================================
 The quantum beamsplitter acting on two truncated-Fock-basis modes, built
 as the unitary exp[theta*(a^dagger b - a b^dagger)] (a Schwinger/SU(2)
@@ -65,7 +65,7 @@ def splitting_ratio(theta, dim=8, alpha=1.0):
     T=cos^2(theta), R=sin^2(theta) convention numerically rather than
     assuming it.
     """
-    from opticspy.quantum import coherent_state
+    from aoptics.quantum import coherent_state
     U = beamsplitter_unitary(theta, dim)
     psi_a = coherent_state(alpha, dim)
     vac = np.zeros(dim, dtype=complex); vac[0] = 1.0
@@ -102,3 +102,4 @@ def hong_ou_mandel_visibility_vs_distinguishability(indistinguishability, dim=6)
     p_indist = hong_ou_mandel_coincidence_probability(dim, theta=np.pi / 4)
     p_dist = 0.25  # classical, distinguishable-photon coincidence rate at a 50/50 BS
     return indistinguishability * p_indist + (1 - indistinguishability) * p_dist
+

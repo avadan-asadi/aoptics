@@ -1,5 +1,5 @@
-"""
-opticspy.qoptics.jaynes_cummings
+﻿"""
+aoptics.qoptics.jaynes_cummings
 ===================================
 The Jaynes-Cummings model: a single two-level atom coupled to a single
 quantized cavity mode under the rotating-wave approximation. Builds the
@@ -111,3 +111,4 @@ def collapse_and_revival_time(g, nbar):
     (standard estimate, Gerry & Knight Ch. 8).
     """
     return 2 * np.pi * np.sqrt(nbar) / g
+

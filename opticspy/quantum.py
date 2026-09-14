@@ -1,5 +1,5 @@
-"""
-opticspy.quantum
+﻿"""
+aoptics.quantum
 ================
 Quantum optics simulation: Fock/coherent/squeezed/cat states,
 Wigner/Husimi functions, photon statistics, Jaynes-Cummings, HOM, Bell states.
@@ -88,3 +88,4 @@ def concurrence(rho_2qubit):
     M = rho_2qubit @ (YY @ rho_2qubit.conj() @ YY)
     ev = np.sqrt(np.maximum(np.sort(np.real(np.linalg.eigvals(M)))[::-1], 0))
     return float(max(0, ev[0]-ev[1]-ev[2]-ev[3]))
+

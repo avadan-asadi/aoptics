@@ -1,12 +1,12 @@
-"""
-opticspy.scattering.metal_optics
+﻿"""
+aoptics.scattering.metal_optics
 ===================================
 Reflection from absorbing media (metals), described by a complex
 refractive index n_tilde = n + i*k. Normal-incidence reflectance,
 optical penetration (skin) depth, and oblique-incidence reflectance via
 the existing Fresnel-equation machinery, which already supports complex
 indices (so metal reflection at any angle simply reuses
-`opticspy.electromagnetic.fresnel` with a complex n2).
+`aoptics.electromagnetic.fresnel` with a complex n2).
 
 Reference: Born & Wolf, "Principles of Optics", Ch. 14 (Optics of
 metals).
@@ -14,7 +14,7 @@ metals).
 
 import numpy as np
 
-from opticspy.electromagnetic import fresnel
+from aoptics.electromagnetic import fresnel
 
 
 def complex_refractive_index(n, k):
@@ -62,3 +62,4 @@ def absorptance(theta_i, n, k, n_incident=1.0, polarization='unpolarized'):
     r = oblique_reflectance_metal(theta_i, n, k, n_incident)
     key = {'s': 'R_s', 'p': 'R_p', 'unpolarized': 'R_unpolarized'}[polarization]
     return 1.0 - r[key]
+

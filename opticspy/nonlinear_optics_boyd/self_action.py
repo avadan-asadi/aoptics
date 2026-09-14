@@ -1,5 +1,5 @@
-"""
-opticspy.nonlinear_optics_boyd.self_action
+﻿"""
+aoptics.nonlinear_optics_boyd.self_action
 ==============================================
 Processes resulting from the intensity-dependent refractive index
 n = n0 + n2*I: self-focusing (critical power, and the empirical
@@ -65,3 +65,4 @@ def self_focusing_length_estimate(n0, n2, intensity, beam_radius):
     the Marburger formula above, included for comparison.
     """
     return beam_radius / (2 * np.sqrt(2 * n2 * intensity / n0))
+
