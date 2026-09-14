@@ -9,7 +9,7 @@ description = "Comprehensive classical & quantum optics research library (Born &
 readme = "README.md"
 license = { text = "MIT" }
 authors = [
-    { name = "Aoptics Contributors" },
+    { name = "Mr.asadipour" },
 ]
 requires-python = ">=3.9"
 keywords = [
